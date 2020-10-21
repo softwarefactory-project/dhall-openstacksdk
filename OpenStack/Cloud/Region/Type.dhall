@@ -1,1 +1,1 @@
-{ name : Text }
+{ name : Text, values : ./Values.dhall }

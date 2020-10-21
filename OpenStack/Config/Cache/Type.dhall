@@ -1,1 +1,1 @@
-{ expiration : { server : Natural, port : Natural } }
+{ expiration : Optional ./Expiration/Type.dhall }
