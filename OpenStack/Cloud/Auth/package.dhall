@@ -1,1 +1,4 @@
-{ Type = ./Type.dhall, default = ./default.dhall }
+{ AppCredential = ./AppCredential.dhall
+, Union = ./Union.dhall
+, User = ./User.dhall
+}

@@ -18,10 +18,13 @@ let cache =
 
 let clouds =
       { rh = OpenStack.Cloud::{
-        , auth = Some OpenStack.Cloud.Auth::{
-          , username = Some "nodepool"
-          , auth_url = "https://mycloud:5000/v2.0"
-          }
+        , auth = Some
+            ( OpenStack.Cloud.Auth.Union.user
+                OpenStack.Cloud.Auth.User::{
+                , username = Some "nodepool"
+                , auth_url = "https://mycloud:5000/v2.0"
+                }
+            )
         , regions = Some [ OpenStack.Cloud.Region.Union.regionName "Public" ]
         }
       }
@@ -29,5 +32,21 @@ let clouds =
 in  OpenStack.Config::{ cache, clouds = toMap clouds }
 
 ```
+
+```
+# dhall-to-yaml --file ./examples/demo.dhall
+cache:
+  expiration:
+    server: 5
+clouds:
+  rh:
+    auth:
+      auth_url: https://mycloud:5000/v2.0
+      username: nodepool
+    regions:
+      - Public
+
+```
+
 [dhall-lang]: https://dhall-lang.org
 [openstacksdk]: https://docs.openstack.org/openstacksdk/latest/
