@@ -1,1 +1,1 @@
-{ name : Text, values : ./Values.dhall }
+{ name : Text, values : { networks : Optional (List ./Network/Type.dhall) } }
