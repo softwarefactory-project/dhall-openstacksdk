@@ -10,13 +10,13 @@ let cache =
 let clouds =
       { rh = OpenStack.Cloud::{
         , auth = Some
-            ( OpenStack.Cloud.Auth.Union.user
+            ( OpenStack.Cloud.Auth.SetUser
                 OpenStack.Cloud.Auth.User::{
                 , username = Some "nodepool"
                 , auth_url = "https://mycloud:5000/v2.0"
                 }
             )
-        , regions = Some [ OpenStack.Cloud.Region.Union.regionName "Public" ]
+        , regions = Some [ OpenStack.Cloud.Region.RegionName "Public" ]
         }
       }
 
