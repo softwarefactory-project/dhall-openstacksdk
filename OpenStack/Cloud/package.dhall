@@ -17,8 +17,4 @@ A package to define a cloud configuration:
 ** NOTE **
  `auth_type` should be set to `Some "v3applicationcredential` if `Cloud.Auth.SetAppCredential` is used
 -}
-{ Type = ./Type.dhall
-, default = ./default.dhall
-, Auth = ./Auth/package.dhall
-, Region = ./Region/package.dhall
-}
+{ Type = ./Type.dhall, default = ./default.dhall }

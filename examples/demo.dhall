@@ -2,22 +2,21 @@ let OpenStack = ../package.dhall
 
 let cache =
       Some
-        { expiration = Some OpenStack.Config.Cache.Expiration::{
-          , server = Some 5
-          }
+        OpenStack.Cache::{
+        , expiration = Some OpenStack.CacheExpiration::{ server = Some 5 }
         }
 
 let clouds =
       { rh = OpenStack.Cloud::{
         , auth = Some
-            ( OpenStack.Cloud.Auth.SetUser
-                OpenStack.Cloud.Auth.User::{
+            ( OpenStack.CloudAuth.SetUser
+                OpenStack.CloudAuth.User::{
                 , username = Some "nodepool"
                 , auth_url = "https://mycloud:5000/v2.0"
                 }
             )
-        , regions = Some [ OpenStack.Cloud.Region.RegionName "Public" ]
+        , regions = Some [ OpenStack.CloudRegion.RegionName "Public" ]
         }
       }
 
-in  OpenStack.Config::{ cache, clouds = toMap clouds }
+in  OpenStack::{ cache, clouds = toMap clouds }

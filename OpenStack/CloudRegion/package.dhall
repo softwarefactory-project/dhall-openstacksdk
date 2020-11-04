@@ -5,20 +5,20 @@ A package to define a region:
 
 ## Region name:
 
-    Region.RegionName "my_region"
+    CloudRegion.RegionName "my_region"
 
-## Region with network configuration:
+## CloudRegion with network configuration:
 
-    Region.RegionWithParams
+    CloudRegion.RegionWithParams
       { name = "my_region"
       , values.networks = Some
-        [ Region.Network::{
+        [ CloudRegionNetwork::{
             , name = "public"
             , routes_externally = Some True
             , default_interface = Some True
             , nat_source = Some True
           }
-          , Region.Network::{
+          , CloudRegionNetwork::{
             , name = "private"
             , routes_externally = Some False
             , nat_destination = Some True
@@ -30,5 +30,4 @@ A package to define a region:
 , RegionWithParams = ./RegionWithParams.dhall
 , Type = ./Type.dhall
 , default = ./default.dhall
-, Network = ./Network/package.dhall
 }

@@ -3,7 +3,7 @@
 
 A package to define the network configuration for a region:
 
-    Network::{
+    CloudRegionNetwork::{
       , name = "public"
       , default_interface = Some True
     }

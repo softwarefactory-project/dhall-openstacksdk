@@ -3,7 +3,7 @@
 
 A package to define a config cache cache configuration:
 
-    Expiration::{
+    CacheExpiration::{
       , server = Some 5
     }
 -}
