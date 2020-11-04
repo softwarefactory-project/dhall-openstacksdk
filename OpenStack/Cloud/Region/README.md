@@ -1,4 +1,3 @@
-{-|
 # Region
 
 A package to define a region:
@@ -25,10 +24,3 @@ A package to define a region:
           }
         ]
       }
--}
-{ RegionName = ./RegionName.dhall
-, RegionWithParams = ./RegionWithParams.dhall
-, Type = ./Type.dhall
-, default = ./default.dhall
-, Network = ./Network/package.dhall
-}

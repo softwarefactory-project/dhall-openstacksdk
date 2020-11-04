@@ -1,4 +1,3 @@
-{-|
 # Config
 
 A package to define a cloud and cache for clouds.yaml configuration file:
@@ -20,8 +19,3 @@ A package to define a cloud and cache for clouds.yaml configuration file:
           }
         }
     }
--}
-{ Type = ./Type.dhall
-, default = ./default.dhall
-, Cache = ./Cache/package.dhall
-}

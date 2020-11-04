@@ -1,4 +1,3 @@
-{-|
 # Auth
 
 A package to define an authentification method.
@@ -20,10 +19,3 @@ A package to define an authentification method.
         , application_credential_id = "app_cred_id"
         , application_credential_secret = "app_cred_secret"
     }
--}
-{ AppCredential = ./AppCredential.dhall
-, SetAppCredential = ./SetAppCredential.dhall
-, SetUser = ./SetUser.dhall
-, Type = ./Type.dhall
-, User = ./User.dhall
-}
