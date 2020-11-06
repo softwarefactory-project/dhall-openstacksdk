@@ -12,7 +12,7 @@ let clouds =
             ( OpenStack.CloudAuth.SetUser
                 OpenStack.CloudAuth.User::{
                 , username = Some "nodepool"
-                , auth_url = "https://mycloud:5000/v2.0"
+                , auth_url = Some "https://mycloud:5000/v2.0"
                 }
             )
         , regions = Some [ OpenStack.CloudRegion.RegionName "Public" ]

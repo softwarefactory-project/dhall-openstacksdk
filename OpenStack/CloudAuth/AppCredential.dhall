@@ -1,7 +1,7 @@
 { Type =
     { application_credential_id : Text
     , application_credential_secret : Text
-    , auth_url : Text
+    , auth_url : Optional Text
     }
-, default = {=}
+, default.auth_url = None Text
 }

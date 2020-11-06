@@ -27,6 +27,7 @@ A package to define a cloud and cache for clouds.yaml configuration file:
 , CacheExpiration = ./CacheExpiration/package.dhall
 , Cloud = ./Cloud/package.dhall
 , CloudAuth = ./CloudAuth/package.dhall
+, CloudNetwork = ./CloudNetwork/package.dhall
 , CloudRegion = ./CloudRegion/package.dhall
 , CloudRegionNetwork = ./CloudRegionNetwork/package.dhall
 }
