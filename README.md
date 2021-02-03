@@ -203,5 +203,13 @@ With dhall 1.34, it's possible to rewrite a clouds.dhall with the schemas comple
 $ dhall rewrite-with-schemas --schemas ./OpenStack/Type.dhall < clouds.dhall
 ```
 
+## Changes
+
+Frozen packages are available in the tag commit.
+
+### 0.1.0
+
+- Initial release
+
 [dhall-lang]: https://dhall-lang.org
 [openstacksdk]: https://docs.openstack.org/openstacksdk/latest/
